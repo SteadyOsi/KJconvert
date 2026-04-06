@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #202020;
+    padding: 10px;
+    padding-right: 17px;
+    padding-left: 17px;
+    font-size: 1rem;
+    border-bottom: 1px solid #f8f8f836; 
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    color: #f8f8f8;
+}
+
+nav a:hover{
+    background-color: #3d3d3d;
+    color: white;
+}
+
+nav a.active {
+    background-color: #3d3d3d;
+    color: white;
+}

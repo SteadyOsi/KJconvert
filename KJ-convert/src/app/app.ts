@@ -8,5 +8,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('KJ-convert');
+  protected readonly title = signal('converter');
 }
+
+//test
