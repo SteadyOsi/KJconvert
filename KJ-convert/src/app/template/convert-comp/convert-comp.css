@@ -1,3 +1,20 @@
 .convert-tempalte {
     background-color: #3d3d3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 20px;
+    border-radius: 20px;
+}
+
+h2, p {
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+
 }
