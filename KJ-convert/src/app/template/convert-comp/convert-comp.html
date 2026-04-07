@@ -1,7 +1,9 @@
 <div class="convert-tempalte">
     <h2>{{ label }} Converter</h2>
     <input type="number"/>
-    <button (click)="convert()">Convert</button>
-    <button (click)="swap()">Swap</button>
+    <div class="buttons">
+        <button (click)="convert()">Convert</button>
+        <button (click)="swap()">Swap</button>
+    </div>
     <p>Result: {{ result }}</p>
 </div>
