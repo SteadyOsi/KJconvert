@@ -8,7 +8,8 @@ import { Component, input, Input } from '@angular/core';
   styleUrl: './convert-comp.css',
 })
 export class ConvertComp {
-  @Input() label = ''; // e.g. "Energy" or "Weight"
+  @Input() label1 = ''; // e.g. "Energy" or "Weight"
+  @Input() label2 = '';
   @Input() convertFn!: (value: number) => number;
 
   inputValue = 0;

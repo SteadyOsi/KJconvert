@@ -11,6 +11,13 @@
     box-shadow: 0 2px 6px rgba(0,0,0, 0.45);
 }
 
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
 h2, p {
     margin: 0;
 }
@@ -24,6 +31,34 @@ input[type="number"] {
     max-width: 250px;
 
     border-radius: 8px;
+    border: 1px solid #d1d5db;
+
+    font-size: 0.95;
+
+    transition: all 0.2s ease;
+
+    margin: 0.5rem 0;
+}
+
+input[type="number"]:focus {
+    border-color: #9BA300;
+    box-shadow: 0 0 0 3px rgba(199, 235, 37, 0.363);
+}
+
+input[type="number"]:hover {
+  border-color: #9ca3af;
+}
+
+/* Chrome, Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .buttons {
