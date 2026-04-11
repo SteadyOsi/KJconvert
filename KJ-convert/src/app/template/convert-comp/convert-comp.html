@@ -1,9 +1,9 @@
 <div class="convert-tempalte">
     <h2>{{ label1 }} to {{ label2 }}</h2>
-    <input type="number"/>
+    <input type="number" [(ngModel)]="inputValue"/>
     <div class="buttons">
         <button (click)="convert()">Convert</button>
         <button (click)="swap()">Swap</button>
     </div>
-    <p>Result: {{ result }}</p>
+    <p>Result: {{ result | number:'1.0-2'}}</p>
 </div>

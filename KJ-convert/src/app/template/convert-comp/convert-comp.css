@@ -12,10 +12,10 @@
 }
 
 label {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-size: 0.85rem;
-  color: #6b7280;
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+    color: #6b7280;
 }
 
 h2, p {
@@ -52,13 +52,13 @@ input[type="number"]:hover {
 /* Chrome, Safari */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type="number"] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 .buttons {
