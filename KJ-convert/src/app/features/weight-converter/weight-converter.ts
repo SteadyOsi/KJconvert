@@ -10,14 +10,19 @@ import { ConvertComp } from '../../template/convert-comp/convert-comp';
 		<app-convert-comp
 		label1="kg"
 		label2="lbs"
-		[convertFn]="convertWeight">
+		[forwardFn]="kgToLbs"
+		[reverseFn]="lbsToKg">
 		</app-convert-comp>
 	`,
 	styleUrl: './weight-converter.css',
 })
 export class WeightConverter {
 
-	convertWeight(value: number): number {
+	kgToLbs(value: number): number {
 		return value * 2.20462;
+	}
+
+	lbsToKg(value: number): number {
+		return value / 2.20462;
 	}
 }

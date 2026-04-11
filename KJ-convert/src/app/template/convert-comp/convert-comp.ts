@@ -12,29 +12,31 @@ import { DecimalPipe } from '@angular/common';
 export class ConvertComp {
 	@Input() label1 = ''; // e.g. "Energy" or "Weight"
 	@Input() label2 = '';
-	@Input() convertFn!: (value: number) => number;
 
+	@Input() forwardFn!: (value: number) => number;
+	@Input() reverseFn!: (value: number) => number;
+
+	isSwapped = false;
   	inputValue = 0;
 	result = 0;
 
-	option1 = 0;
-	option2 = 0;
-	selected = this.option1;
 
 	convert() {
-		if(this.convertFn) {
-		this.result = this.convertFn(this.inputValue);
+		if (this.isSwapped) {
+			this.result = this.reverseFn(this.inputValue);
+		} else {
+			this.result = this.forwardFn(this.inputValue);
 		}
 	}
 
     swap() {
-		const temp = this.label1;
-		this.label1 = this.label2;
-		this.label2 = temp;
+		this.isSwapped = !this.isSwapped;
 
+		// swap labels
+		[this.label1, this.label2] = [this.label2, this.label1];
+
+		// reset values
 		this.inputValue = 0;
 		this.result = 0;
-
-		// invert conversion? 
     }
 }

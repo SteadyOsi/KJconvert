@@ -10,13 +10,18 @@ import { ConvertComp } from '../../template/convert-comp/convert-comp';
 		<app-convert-comp
 		label1="kj"
 		label2="kcal"
-		[convertFn]="convertEnergy">
+		[forwardFn]="kjToKcal"
+		[reverseFn]="kcalToKj">
 		</app-convert-comp>
 	`,
 	styleUrl: './energy-converter.css',
 })
 export class EnergyConverter {
-	convertEnergy(value: number): number {
+	kjToKcal(value: number): number {
 		return value * 0.2390057;
+	}
+
+	kcalToKj(value: number): number {
+		return value / 0.2390057;
 	}
 }
